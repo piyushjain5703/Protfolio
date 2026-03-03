@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --bg: #0a0a1a;
+  --bg-alt: #0d0d22;
+  --fg: #e4e4ef;
+  --fg-muted: #94a3b8;
+  --border-color: #1e1e3a;
+  --card-bg: rgba(18, 18, 42, 0.6);
+  --card-border: rgba(124, 58, 237, 0.1);
+  --card-hover-border: rgba(124, 58, 237, 0.3);
+  --card-hover-shadow: rgba(124, 58, 237, 0.05);
+  --accent: #7c3aed;
+  --cyan: #06b6d4;
+  --accent-10: rgba(124, 58, 237, 0.1);
+  --accent-15: rgba(124, 58, 237, 0.15);
+  --accent-20: rgba(124, 58, 237, 0.2);
+  --accent-40: rgba(124, 58, 237, 0.4);
+  --cyan-15: rgba(6, 182, 212, 0.15);
+  --cyan-20: rgba(6, 182, 212, 0.2);
+  --nav-bg: rgba(10, 10, 26, 0.8);
+  --nav-mobile-bg: rgba(10, 10, 26, 0.95);
+  --progress-track: #1e1e3a;
+  --scrollbar-track: #0a0a1a;
+  --scrollbar-thumb: #2a2a4a;
+  --scrollbar-hover: #3a3a5a;
+  --hero-g1: rgba(124, 58, 237, 0.15);
+  --hero-g2: rgba(6, 182, 212, 0.08);
+  --hero-g3: rgba(124, 58, 237, 0.05);
+  --orb-1: rgba(124, 58, 237, 0.1);
+  --orb-2: rgba(6, 182, 212, 0.08);
+  --dot-separator: #1e1e3a;
+}
+
+html.light {
+  --bg: #f8f9fc;
+  --bg-alt: #eef1f6;
+  --fg: #1a1a2e;
+  --fg-muted: #64748b;
+  --border-color: #dfe2ea;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --card-border: rgba(124, 58, 237, 0.1);
+  --card-hover-border: rgba(124, 58, 237, 0.3);
+  --card-hover-shadow: rgba(124, 58, 237, 0.08);
+  --accent: #7c3aed;
+  --cyan: #0891b2;
+  --accent-10: rgba(124, 58, 237, 0.07);
+  --accent-15: rgba(124, 58, 237, 0.1);
+  --accent-20: rgba(124, 58, 237, 0.13);
+  --accent-40: rgba(124, 58, 237, 0.3);
+  --cyan-15: rgba(8, 145, 178, 0.1);
+  --cyan-20: rgba(8, 145, 178, 0.13);
+  --nav-bg: rgba(248, 249, 252, 0.85);
+  --nav-mobile-bg: rgba(248, 249, 252, 0.98);
+  --progress-track: #e2e4ea;
+  --scrollbar-track: #f0f0f5;
+  --scrollbar-thumb: #c0c0d0;
+  --scrollbar-hover: #a0a0b5;
+  --hero-g1: rgba(124, 58, 237, 0.07);
+  --hero-g2: rgba(6, 182, 212, 0.04);
+  --hero-g3: rgba(124, 58, 237, 0.03);
+  --orb-1: rgba(124, 58, 237, 0.06);
+  --orb-2: rgba(6, 182, 212, 0.04);
+  --dot-separator: #cbd5e1;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--card-hover-border);
+  box-shadow: 0 0 30px var(--card-hover-shadow);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.progress-bar-fill {
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-gradient {
+  background: radial-gradient(ellipse at 50% 0%, var(--hero-g1) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, var(--hero-g2) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, var(--hero-g3) 0%, transparent 50%);
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+  transition: background-color 0.3s ease;
+}
+

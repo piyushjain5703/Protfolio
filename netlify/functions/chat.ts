@@ -1,6 +1,6 @@
 import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { GoogleGenAI } from "@google/genai";
-import { portfolioContextJson } from "./portfolio-context.generated";
+import { portfolioContextJson } from "./lib/portfolio-context.generated";
 
 const MODEL = "gemini-2.5-flash";
 const MAX_REQUESTS_PER_IP_PER_DAY = 30;

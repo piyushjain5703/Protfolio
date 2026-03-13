@@ -44,4 +44,4 @@ next-env.d.ts
 .netlify
 
 # Generated at build for Netlify function (do not commit)
-netlify/functions/portfolio-context.generated.ts
+netlify/functions/lib/portfolio-context.generated.ts

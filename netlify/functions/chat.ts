@@ -1,7 +1,6 @@
 import type { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
-import * as fs from "fs";
-import * as path from "path";
 import { GoogleGenAI } from "@google/genai";
+import { portfolioContextJson } from "./portfolio-context.generated";
 
 const MODEL = "gemini-2.5-flash";
 const MAX_REQUESTS_PER_IP_PER_DAY = 30;
@@ -9,20 +8,6 @@ const RATE_LIMIT_WINDOW_MS = 24 * 60 * 60 * 1000;
 
 // In-memory rate limit (per instance; resets on cold start)
 const ipCounts = new Map<string, { count: number; resetAt: number }>();
-
-function getPortfolioContext(): string {
-  const candidates = [
-    path.join(process.cwd(), "netlify", "functions", "portfolio-context.json"),
-    path.join(__dirname, "portfolio-context.json"),
-  ];
-  for (const p of candidates) {
-    if (fs.existsSync(p)) {
-      const raw = fs.readFileSync(p, "utf-8");
-      return raw;
-    }
-  }
-  throw new Error("portfolio-context.json not found");
-}
 
 function corsHeaders(origin: string | null): Record<string, string> {
   const allow = origin || "*";
@@ -114,20 +99,6 @@ export const handler: Handler = async (
     };
   }
 
-  let contextJson: string;
-  try {
-    contextJson = getPortfolioContext();
-  } catch (e) {
-    return {
-      statusCode: 500,
-      headers,
-      body: JSON.stringify({
-        error: "Context not found",
-        reply: "Sorry, the chat is temporarily unavailable.",
-      }),
-    };
-  }
-
   const systemInstruction = `You are a helpful chatbot for Piyush Jain's portfolio website. Your ONLY job is to answer questions about the following portfolio content. You must NOT answer questions about anything else (general knowledge, other people, unrelated topics).
 
 Allowed topics: Piyush's tech stack, work experience, projects, tasks he did, articles, education, certifications, about/bio, and contact info.
@@ -137,7 +108,7 @@ If the user asks something that is not related to this portfolio (e.g. weather, 
 Use the following portfolio data (JSON) to answer. Prefer concise, friendly answers. You may use markdown for lists or links when helpful.
 
 --- Portfolio data (JSON) ---
-${contextJson}
+${portfolioContextJson}
 --- End portfolio data ---`;
 
   const history = Array.isArray(body.history) ? body.history : [];

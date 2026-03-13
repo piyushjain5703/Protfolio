@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
+
+# Generated at build for Netlify function (do not commit)
+netlify/functions/portfolio-context.generated.ts

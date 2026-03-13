@@ -1,0 +1,261 @@
+{
+  "siteConfig": {
+    "name": "Piyush Jain",
+    "initials": "PJ",
+    "role": "Software Engineer",
+    "tagline": "I architect high-performance microservices, scalable backend systems, and AI-powered features. IIT Dharwad graduate with deep expertise in AWS, System Design, and distributed systems.",
+    "email": "piyushjain5703@gmail.com",
+    "phone": "+91 9887770780",
+    "location": "Alwar, Rajasthan",
+    "linkedin": "https://www.linkedin.com/in/piyush-jain5703/",
+    "github": "https://github.com/piyushjain5703",
+    "medium": "https://medium.com/@piyushjain5703",
+    "resumeUrl": "https://drive.google.com/file/d/1VfvAMk7Zv7VEGMx_uQbOHUTfkMoosonk/view?usp=sharing"
+  },
+  "stats": [
+    {
+      "value": "2.5+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "IIT",
+      "label": "Dharwad Graduate"
+    },
+    {
+      "value": "Software",
+      "label": "Engineer"
+    },
+    {
+      "value": "YC-backed",
+      "label": "Startup Exp."
+    }
+  ],
+  "aboutParagraphs": [
+    "I am a Software Engineer with deep expertise in building high-performance microservices and scalable backend systems. With experience at Traveloka and a YC-backed startup, I have architected solutions that handle 38k RPM, process 1TB/hour of data, and integrate cutting-edge LLM-based features into production systems.",
+    "My core strengths lie in Java, AWS, Elasticsearch, and System Design. I've worked extensively with distributed systems, message queues, caching layers, and observability platforms to deliver reliable, low-latency services at scale.",
+    "I graduated from IIT Dharwad with a B.Tech in Electrical Engineering (CGPA 8.55) and have hands-on experience with AI/ML, having worked on deep learning projects during my time there. I'm passionate about solving complex engineering challenges and writing clean, maintainable code."
+  ],
+  "experiences": [
+    {
+      "title": "Software Development Engineer (Backend)",
+      "company": "Traveloka",
+      "period": "Dec 2024 – Present",
+      "location": "Bangalore, Karnataka",
+      "current": true,
+      "bullets": [
+        "Designed and implemented an \"LLM-based Route Translation Service\" integrated into Hotel and Experience search banners, dynamically recommending optimal flight routes and driving a 4% increase in CTR for flight searches.",
+        "Designed and implemented features for \"Nexus Service\", a high-throughput middleware for Elasticsearch — implementing Aggregations, Boosting, and Disjunctive Filters. Achieved a 3x reduction in latency (160ms → 57ms) and scaled to 38k RPM.",
+        "Deeply customized AWS OpenSearch indices with specialized settings, mappings, and analyzers. Engineered support for Korean and Chinese languages, leading to a 7% increase in RPM for market expansion.",
+        "Defined team GitHub branching strategies and release protocols. Built comprehensive Datadog dashboards and monitors. Managed team on-calls, sales support, and critical stakeholder communication."
+      ],
+      "tags": [
+        "Java",
+        "AWS OpenSearch",
+        "Elasticsearch",
+        "Datadog",
+        "LLM",
+        "Spring Boot"
+      ]
+    },
+    {
+      "title": "Software Development Engineer",
+      "company": "Anakin (YC S21)",
+      "period": "May 2023 – Dec 2024",
+      "location": "Bangalore, Karnataka",
+      "current": false,
+      "bullets": [
+        "Introduced the \"Generic Compilation Service\" for data structure transformation using JSONPath configurations. Implemented caching and batch processing, managing 1TB/Hour data in Amazon S3 — reducing development time by 30% and deployment time by 20%.",
+        "Created a General Library (Anakin Commons) integrating a scalable SQS-based pipeline sub-module, resulting in a 30% reduction in development time and 10% decrease in human error.",
+        "Designed and implemented scalable data extraction pipelines handling 200k+ product records from major e-commerce platforms using AWS ECS, SQS, and CloudWatch Alarms."
+      ],
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "AWS S3",
+        "SQS",
+        "ECS",
+        "JSONPath"
+      ]
+    }
+  ],
+  "techStack": [
+    {
+      "category": "Languages",
+      "skills": [
+        "Java",
+        "Python",
+        "Go",
+        "C++",
+        "JavaScript",
+        "SQL",
+        "Terraform"
+      ]
+    },
+    {
+      "category": "Backend Frameworks",
+      "skills": [
+        "Spring Boot",
+        "FastAPI",
+        "Django",
+        "React JS"
+      ]
+    },
+    {
+      "category": "Databases",
+      "skills": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "DynamoDB",
+        "Redis",
+        "Elasticsearch"
+      ]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "skills": [
+        "AWS ECS",
+        "AWS SQS",
+        "AWS EC2",
+        "AWS S3",
+        "AWS Lambda",
+        "CloudWatch",
+        "Docker",
+        "CI/CD",
+        "GitHub Actions",
+        "Kafka"
+      ]
+    },
+    {
+      "category": "AI / ML",
+      "skills": [
+        "TensorFlow",
+        "Keras",
+        "PyTorch",
+        "LLM Integration"
+      ]
+    },
+    {
+      "category": "Tools & Monitoring",
+      "skills": [
+        "DataDog",
+        "Grafana",
+        "IntelliJ",
+        "VS Code",
+        "Linux",
+        "Git"
+      ]
+    }
+  ],
+  "proficiency": [
+    {
+      "label": "Backend & Microservices",
+      "percent": 95
+    },
+    {
+      "label": "Cloud & AWS",
+      "percent": 90
+    },
+    {
+      "label": "System Design & Architecture",
+      "percent": 85
+    },
+    {
+      "label": "Programming Languages",
+      "percent": 85
+    },
+    {
+      "label": "AI / ML",
+      "percent": 65
+    }
+  ],
+  "marqueeItems": [
+    "Java",
+    "Spring Boot",
+    "AWS",
+    "Elasticsearch",
+    "Kafka",
+    "Docker",
+    "Go",
+    "Python",
+    "Redis",
+    "PostgreSQL",
+    "System Design",
+    "Microservices",
+    "DynamoDB",
+    "CI/CD"
+  ],
+  "projects": [
+    {
+      "title": "TaskFlow",
+      "badge": "Full Stack",
+      "description": "A full-featured task management platform with user authentication, task CRUD with filtering and pagination, threaded comments, drag-and-drop file attachments, analytics dashboards with interactive charts, and CSV export — built with FastAPI and React.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker",
+        "JWT"
+      ],
+      "liveUrl": "https://tasks-flow-web.netlify.app/login",
+      "githubUrl": "https://github.com/piyushjain5703/task-management-system"
+    },
+    {
+      "title": "Image Captioning (CNN + LSTM)",
+      "badge": "IIT Dharwad",
+      "description": "Collaborated on an innovative project automating image caption generation using a pre-trained CNN model (Xception) for feature extraction and LSTM networks for caption preprocessing with BLEU metric evaluation.",
+      "tags": [
+        "Python",
+        "TensorFlow",
+        "CNN",
+        "LSTM",
+        "Deep Learning"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "title": "Virtual Threads in Java: Revolutionizing Concurrency",
+      "description": "An in-depth exploration of Java 21's virtual threads — examining how they simplify concurrent programming by enabling lightweight, scalable threads managed by the JVM instead of the OS. Covers the limitations of traditional platform threads, the new Thread.ofVirtual() API, structured concurrency, and practical patterns for building high-throughput applications.",
+      "date": "Jan 22, 2025",
+      "url": "https://medium.com/@piyushjain5703",
+      "tags": [
+        "Java 21",
+        "Virtual Threads",
+        "Concurrency",
+        "JVM"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Deep Learning Specialization",
+      "issuer": "DeepLearning.AI",
+      "link": "https://coursera.org/account/accomplishments/verify/ZNDDNNUECX9B"
+    },
+    {
+      "title": "Machine Learning & AI",
+      "issuer": "IITG.ai"
+    },
+    {
+      "title": "Java: Testing with JUnit",
+      "issuer": "LinkedIn Learning"
+    },
+    {
+      "title": "C++ Programming",
+      "issuer": "Udemy",
+      "link": "https://udemy.com/certificate/UC-37ef0177-5c2e-4e63-b260-1aef9d33eb35/"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology",
+      "institution": "Indian Institute of Technology (IIT) Dharwad",
+      "period": "2020 – 2024",
+      "field": "Electrical Engineering",
+      "grade": "CGPA 8.55",
+      "location": "Dharwad, Karnataka"
+    }
+  ]
+}
